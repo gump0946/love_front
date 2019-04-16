@@ -1,0 +1,51 @@
+<!--index.wxml-->
+<template name="msgTemp">
+  <view class='cart_container' bindtap='getDetial' data-id='{{id}}'>
+    <view>
+      <image class='item-image' src="{{picture}}" mode="scaleToFill"></image>
+    </view>
+    <view>
+      <view class='title'>{{title}}</view>
+      <view class='time'>{{date}}</view>
+    </view>
+  </view>
+</template>
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item.pic}}" />
+    </swiper-item>
+  </block>
+</swiper>
+<!-- banner end-->
+<view class="separate"></view>
+<view class="cate-container">
+  <view class="category-title">
+    <view>
+      <text class="active-name">最新活动</text>
+      <image src='../../images/place.png' class='image-place' bindtap='getMap'></image>
+    </view>
+    <view class="goods">
+      <view wx:for-items="{{activesHotItems}}" wx:key="name">
+        <view class="goods-item" catchtap="showDetail" data-type="{{item.name}}" data-id="{{item.id}}" data-typeid="{{item.typeId}}">
+          <image src="{{item.picture}}" class="goods-image" />
+          <p>{{item.name}}</p>
+          <p>报名人数:{{item.stock}}</p>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="welfare-container">
+  <view class="category-title">
+    <text class="title">每日新闻</text>
+    <view class="line_name">
+      <text>每天早10晚8准时上新</text>
+    </view>
+  </view>
+  <view wx:for="{{articleList}}">
+    <!--用is 使用模版-->
+    <template is="msgTemp" data="{{...item}}" />
+  </view>
+</view>

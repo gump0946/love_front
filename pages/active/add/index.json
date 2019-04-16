@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "发布活动",
+  "usingComponents": {
+    "van-field": "/dist/field/index",
+    "van-picker": "/dist/picker/index",
+    "van-action-sheet": "/dist/action-sheet/index",
+    "van-button": "/dist/button/index"
+  }
+}

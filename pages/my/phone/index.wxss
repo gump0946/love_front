@@ -1,0 +1,5 @@
+/* pages/my/phone/index.wxss */
+.btn{
+  margin-left: 300rpx;
+  margin-top: 30rpx;
+}

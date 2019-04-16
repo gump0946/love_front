@@ -1,0 +1,38 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+@import "/dist/common/index.wxss";
+
+@font-face {
+  font-family: 'iconfont';  /* project id 1084307 */
+  src: url('//at.alicdn.com/t/font_1084307_7wq9qycwraw.eot');
+  src: url('//at.alicdn.com/t/font_1084307_7wq9qycwraw.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1084307_7wq9qycwraw.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1084307_7wq9qycwraw.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1084307_7wq9qycwraw.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1084307_7wq9qycwraw.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:50rpx;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*本项目使用的iconfont图标*/
+.icon-dingdan:before{content: '\e600';}
+.icon-dizhi:before{content: '\e638';}
+.icon-you:before{content: '\e603';}
+.icon-zhuyi:before{content: '\e657';}
+.icon-yijian:before{content: '\e615';}
+.icon-picture:before{content: '\e64a';}

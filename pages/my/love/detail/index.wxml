@@ -1,0 +1,14 @@
+<!--pages/my/love/detail/index.wxml-->
+<image src="{{active.picture}}" mode="widthFix"></image>
+<van-cell-group>
+  <van-cell title="{{active.name}}" title-class='title-size' value="报名人数：{{active.stock}}" value-class='value-size'/>
+</van-cell-group>
+<p class='detail'>{{active.detail}}</p>
+<!-- 底部悬浮栏 -->
+<view class="detail-nav">
+  <image bindtap="toCar" src="../../../../images/publish.png" />
+  <view class="line_nav"></view>
+  <image bindtap="addLike" src="{{isLike?'../../../../images/enshrine_select.png':'../../../../images/enshrine.png'}}" />
+  <button class="button-green" bindtap="toAdd">发布活动</button>
+  <button class="button-red" bindtap="immeBuy" data-name='{{active.name}}' formType="submit">立即报名</button>
+</view>

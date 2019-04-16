@@ -1,0 +1,37 @@
+<!--pages/index/detail/index.wxml-->
+<view>
+  <image class='pic-size' src="{{article.picture}}" mode="scaleToFill"></image>
+</view>
+<view>
+  <view class='title'>{{article.title}}</view>
+  <view class='title'>{{article.date}}</view>
+  <view class='content'>{{article.content}}</view>
+</view>
+
+<view class='liuyan'>
+  <form bindsubmit="formSubmit">
+    <input type="text" name="liuyantext" placeholder='输入留言内容' required class="input-style" />
+    <button formType="submit" class="btn" wx:if="{{nickName == empty}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">留言</button>
+    <button formType="submit" class="btn" wx:else>留言</button>
+    <input type="text" name="nickname" value='{{nickName}}' style="display:none;" />
+    <input type="text" name="headimg" value='{{avatarUrl}}' style="display:none;" />
+  </form>
+</view>
+
+<view wx:for="{{re}}" wx:key="re">
+  <view class="result">{{item.result}}</view>
+</view>
+<view style="text-align:center;font-size:14px;color:#ccc;margin-top:20px;">以下是留言内容</view>
+<view wx:for="{{liuyanlist}}" wx:key="liuyanlist" class="liuyanview">
+  <view class="headimg">
+    <image src="{{item.avatarUrl}}"></image>
+  </view>
+  <view class="nickname_liuyantext">
+    <view class="nickname">{{item.nickname}}
+      <view class="time">{{item.date}}</view>
+    </view>
+    <view class="text">{{item.mess}}</view>
+  </view>
+  <!-- 占位符 -->
+  <view style="width:100%;height:10px;"></view>
+</view>

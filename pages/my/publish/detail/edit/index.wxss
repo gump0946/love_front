@@ -1,0 +1,35 @@
+/* pages/my/publish/detail/edit/index.wxss */
+.content{
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  font-size: 40rpx;
+}
+.name{
+  margin-top:8rpx;
+  height: 80rpx;
+  background-color: #fff;
+}
+.info{
+  display: flex;
+  flex-direction: column;
+}
+.catagory{
+  margin-left: 30rpx;
+  font-size: 30rpx;
+  margin-top: 25rpx;
+  background-color: #fff;
+  margin-bottom: 15rpx;
+  color: #000;
+}
+.catagoryList{
+  margin-left: 50rpx;
+}
+.pic-pos{
+  margin-left: 50rpx;
+}
+.btn-pos{
+  width: 150rpx;
+  margin-left: 250rpx;
+  margin-top: 50rpx;
+}

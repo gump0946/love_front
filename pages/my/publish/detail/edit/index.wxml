@@ -1,0 +1,25 @@
+<!--pages/my/publish/detail/edit/index.wxml-->
+<!--pages/active/add/index.wxml-->
+<view class='content'>
+  <view class='info'>
+    <van-cell-group>
+      <van-field required clearable label="活动名" placeholder="请输入活动名称" name="name" bind:change="getName" value="{{active.name}}" />
+      <van-field required clearable label="活动描述" type="textarea" placeholder="请输入描述" name="description" bind:change="getDescription" autosize border="true" value="{{active.detail}}" />
+      <picker bindchange="catagoryPicker" value="{{active.catagory}}" range="{{catagoryList}}">
+        <view class='catagory'>物品分类：
+          <text class='catagoryList'>{{catagoryList[catagory]}}</text>
+        </view>
+      </picker>
+
+      <text catchtap="chooseImage" class='iconfont icon-picture pic-pos'></text>
+      <view class="sale after-pic">
+        <view class="pic">
+          <image src="{{active.picture}}" />
+          <icon type="clear" size="20" catchtap="clearImg" data-id="{{index}}" />
+        </view>
+      </view>
+      <van-button type="primary" class='btn-pos' bind:click="submit">发布</van-button>
+      <image src='{{imgUrl}}' class='w100' mode="aspectFit"></image>
+    </van-cell-group>
+  </view>
+</view>

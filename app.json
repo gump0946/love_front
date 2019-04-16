@@ -1,0 +1,57 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/index/detail/index",
+    "pages/index/detail1/index",
+    "pages/my/index",
+    "pages/my/phone/index",
+    "pages/my/publish/index",
+    "pages/my/publish/detail/index",
+    "pages/my/publish/detail/edit/index",
+    "pages/my/love/index",
+    "pages/my/love/detail/index",
+    "pages/active/index",
+    "pages/active/add/index",
+    "pages/active/detail/index",
+    "pages/template/index"
+  ],
+  "window":{
+    "backgroundColor": "#35B6DD",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#35B6DD",
+    "navigationBarTitleText": "mini demo",
+    "navigationBarTextStyle": "black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "tabBar": {
+    "color": "#b1b1b1",
+    "selectedColor": "#35B6DD",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/TabBar/article_1.png",
+        "selectedIconPath": "images/TabBar/article_2.png"
+      },
+      {
+        "pagePath": "pages/active/index",
+        "text": "活动",
+        "iconPath": "images/TabBar/good_1.png",
+        "selectedIconPath": "images/TabBar/good_2.png"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "text": "我的",
+        "iconPath": "images/TabBar/my_1.png",
+        "selectedIconPath": "images/TabBar/my_2.png"
+      }
+    ]
+  },
+  "debug": true
+}

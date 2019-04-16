@@ -1,0 +1,16 @@
+<!--pages/my/love/index.wxml-->
+<template name="msgTemp">
+  <view class='cart_container' bindtap='getDetial' data-id='{{id}}'>
+    <view>
+      <image class='item-image' src="{{picture}}" mode="scaleToFill"></image>
+    </view>
+    <view>
+      <view class='title'>{{name}}</view>
+      <view class='time'>报名人数：{{stock}}</view>
+    </view>
+  </view>
+</template>
+<view wx:for="{{activeList}}">
+  <!--用is 使用模版-->
+  <template is="msgTemp" data="{{...item}}" />
+</view>

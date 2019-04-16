@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "活动浏览",
+  "usingComponents": {
+    "van-search": "/dist/search/index"
+  },
+  "enablePullDownRefresh": true
+}

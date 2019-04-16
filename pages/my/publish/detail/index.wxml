@@ -1,0 +1,7 @@
+<!--pages/active/detail/index.wxml-->
+<image src="{{active.picture}}" mode="widthFix"></image>
+<van-cell-group>
+  <van-cell title="{{active.name}}" title-class='title-size' value="报名人数：{{active.stock}}" value-class='value-size'/>
+</van-cell-group>
+<p class='detail-pos'>{{active.detail}}</p>
+<image src='../../../../images/edit.png' class='image-edit' bindtap='editActive'></image>
