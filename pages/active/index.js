@@ -85,5 +85,16 @@ Page({
     this.setData({
       isHideLoadMore: true
     })
+  },
+  onSearch:function(e) {
+    var that = this
+    console.log(e.detail)
+    app.ajax.post('/good/getByName', {
+      name: e.detail,
+    }, function(res) {
+      that.setData({
+        activesHotItems:res.data
+      })
+    })
   }
 })

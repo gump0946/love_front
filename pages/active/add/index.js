@@ -89,9 +89,6 @@ Page({
           }
         })
       }
-      wx.showToast({
-        title: '描述不能为空',
-      })
     }
   }
 })
